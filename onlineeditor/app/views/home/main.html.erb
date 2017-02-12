@@ -1,0 +1,14 @@
+<div style="display: flex;">
+	<div>
+		<form action="/result" method="POST" >
+			<textarea style="height: 100%;" name="code" cols="40" rows="5"><%= File.read('scaffold.txt')%></textarea>
+			<input type="submit" name="" value="run">
+		</form>
+	</div>
+
+	<div>
+		<% if @result != '-' %>
+			<h1><%=@result%></h1>
+		<%end%>
+	</div>
+</div>
