@@ -2,3 +2,53 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html{
+  width: 100%;
+  height: 100%;
+}
+body{
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: monospace;
+  size: 22px;
+}
+p{
+  display: inline;
+  color: white;
+  font-family: monospace;
+  size: 22px;
+}
+.datatype{
+  color: chartreuse;
+}
+.io{
+  color: gold;
+}
+#my_dataset{
+  width: 45%;
+  height: 50%;
+}
+#container{
+  height: 90%;
+  width: 50%;
+  overflow-y: scroll;
+  background-color: rgba(8, 8, 17, 0.84);
+}
+#butt{
+  width: 50%;
+  height: 40px;
+  size: 32px;
+}
+#input{
+  margin-left: 2%;
+  width: 25%;
+  height: 50%;
+  background-color: #730E15;
+}
+#output{
+  margin-left: 2%;
+  width: 25%;
+  height: 50%;
+  background-color: #347338;
+}

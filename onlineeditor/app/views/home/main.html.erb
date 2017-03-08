@@ -1,14 +1,24 @@
-<div style="display: flex;">
-	<div>
-		<form action="/result" method="POST" >
-			<textarea style="height: 100%;" name="code" cols="40" rows="5"><%= File.read('scaffold.txt')%></textarea>
-			<input type="submit" name="" value="run">
-		</form>
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= stylesheet_link_tag    'home.scss', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'home.js', 'data-turbolinks-track' => true %>
+	</head>
+ 	<body>
+	<div id="container" contenteditable="true" onkeypress="seeforkey(event)" onkeydown="backspacing(event)" onload="settingThings()">
+		<div contenteditable="false">All header files are already included, use space after << in cout<br>avoid using tab for now</div>
+		<div><br></div>
 	</div>
-
-	<div>
-		<% if @result != '-' %>
-			<h1><%=@result%></h1>
-		<%end%>
+	<form action="/result" method="POST" id="code-form">
+		<textarea id="hiddencode" style="display: none;" name="code" form="code-form"></textarea>
+		<textarea id="inputdata" style="display: none;" name="code1" form="code-form"></textarea>
+		<input type="submit" id="butt" name="" value="run" onclick="insertintextarea()">
+	</form>
+	<div id="input" contenteditable="true">
 	</div>
-</div>
+	<div id="output">
+		<p>OUTPUT</p><br>
+		<%=File.read("result.txt")%>
+	</div>
+	</body>
+</html>
